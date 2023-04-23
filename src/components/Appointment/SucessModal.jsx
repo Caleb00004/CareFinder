@@ -6,6 +6,8 @@ import html2canvas from "html2canvas";
 
 function SucessModal({ setShowModal, formDetails }) {
   
+  const {firstName, lastName, sex, appointmentType, meetingDate, meetingTime} = formDetails
+
   function handleDocument() {
 
     const doc = new jsPDF();
@@ -25,7 +27,6 @@ function SucessModal({ setShowModal, formDetails }) {
     })
   }
 
-  const {firstName, lastName, sex, appointmentType, meetingDate, meetingTime} = formDetails
 
   return (
     <>
@@ -44,7 +45,7 @@ function SucessModal({ setShowModal, formDetails }) {
             <li><span style={{color: '#003963'}}>TIme:</span> @{meetingTime}AM</li>
             <li><span style={{color: '#003963'}}>Appointment Type:</span> {appointmentType}</li>
             <li><span style={{color: '#003963'}}>sex:</span> {sex}</li>
-            <li><h3><span style={{color: '#003963'}}>Doctor:</span> Mr Phil Michaelson</h3></li>
+            <li><h3><span style={{color: '#003963'}}>Doctor:</span> Dr Paul Eneche</h3></li>
           </ul>
         </div>
         {/*  */}
